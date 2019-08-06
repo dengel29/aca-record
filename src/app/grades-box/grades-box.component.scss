@@ -1,0 +1,65 @@
+.form-group {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+//   max-width: 60%;
+//   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+  grid-column: 1 / 4;
+}
+
+.warning {
+  border: 2px solid rgb(235, 85, 16);
+  box-shadow: 0.3px;
+}
+
+.btn {
+  width:7em;
+  height:3em;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-row: 3;
+  grid-column: 2;
+  place-self: center;
+}
+
+label {
+  place-self: center;
+}
+
+input {
+  justify-self: center;
+}
+
+.subject-list {
+  max-height: 7em;
+  width: auto;
+  overflow-y: scroll;
+  border: 2px solid hotpink;
+}
+
+
+.btn-primary {
+  background-color: rgba(1, 119, 119, 0.459);
+}
+
+.student-selected-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:70%;
+  min-width:70%
+}
+
+.form-grid {
+  display: grid;
+  grid-template-rows: 3em 3em 3em;
+  grid-template-columns: 1fr 1fr 1fr 10px 10px;
+  grid-gap: 3px;
+}
+
+
+
+

@@ -1,0 +1,12 @@
+<mat-button-toggle-group
+  #group="matButtonToggleGroup"
+  class="list-container"
+  [vertical]='true'
+  (click)="selectPlayer($event)">
+  <app-player-item
+  class="player-item-container"
+  *ngFor="let p of players"
+  [player]="p"
+></app-player-item>
+</mat-button-toggle-group>
+

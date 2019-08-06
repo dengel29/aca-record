@@ -1,0 +1,18 @@
+.selected {
+  border: 1px solid hotpink;
+  margin: 0.3em auto;
+  text-align: center;
+}
+
+mat-button-toggle {
+  display: flex;
+  flex-basis: content;
+}
+
+.button-content {
+  text-align: center;
+  justify-content: center;
+}
+
+
+

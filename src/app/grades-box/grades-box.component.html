@@ -1,0 +1,45 @@
+<div class="grades-box-header">
+  <h1
+    *ngIf="!scService.currentStudent">Please select a student</h1>
+  <div
+    *ngIf="scService.currentStudent"
+    class="student-selected-header">
+  <h1
+    >{{scService.getCurrentStudent().name}}</h1>
+    <button (click)="scService.onSaveSubjects()">Save</button>
+  </div>
+</div>
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="form-grid">
+  <div class="form-group">
+    <label for="subject">Subject name</label>
+    <input
+    type="text"
+    id="title"
+    name="title"
+    class=""
+    ngModel required
+    #nameCtrl="ngModel"
+    [ngClass]="{'warning': nameCtrl.invalid}">
+
+  </div>
+  <div class="form-group">
+    <label for="grade">Grade</label>
+    <input
+      name="score"
+      id="score"
+      class="form-control"
+      type="number"
+      ngModel required
+      #gradeCtrl="ngModel"
+      [ngClass]="{'warning': gradeCtrl.invalid}">
+  </div>
+
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Add a new subject</button>
+
+</form>
+
+<app-subject-list
+  *ngIf="scService.currentStudent"
+  class="subject-list"
+  [subjects]='scService.getCurrentSubjects()'></app-subject-list>

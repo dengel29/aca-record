@@ -1,0 +1,5 @@
+{
+	"/api/Home/GameStats/:id": "/GameStats",
+	"/api/Home/PlayerStats/:id": "/PlayerStats",
+	"/api/Home/PlayerStatsCal/:id": "/PlayerStatsCal"
+}

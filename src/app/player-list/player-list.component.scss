@@ -1,0 +1,25 @@
+.selected {
+  border: 1px solid hotpink;
+  background-color: hotpink;
+}
+
+.player-item-container {
+  height: auto;
+  align-content: center;
+  width: auto;
+}
+
+mat-button-toggle {
+  display: flex;
+  // flex-basis: content;
+}
+
+mat-button-toggle-group {
+  width: 100%
+}
+
+.button-content {
+  text-align: center;
+  justify-content: center;
+}
+
