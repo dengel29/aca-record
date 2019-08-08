@@ -18,7 +18,12 @@ export class GradesBoxComponent implements OnInit, OnChanges {
 
   onSubmit(form) {
     this.scService.makeNewSubject(form);
-    document.getElementById('title').focus();
+    let titleInput: HTMLInputElement =  <HTMLInputElement>document.getElementById('title');
+    let scoreInput: HTMLInputElement =  <HTMLInputElement>document.getElementById('score');
+    titleInput.focus();
+    titleInput.value = " ";
+    scoreInput.value = " ";
+   
   }
 
   ngOnChanges(changes: SimpleChanges) {

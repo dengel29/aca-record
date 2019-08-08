@@ -27,7 +27,7 @@ export class PlayerListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // document.getElementById('25').classList.toggle('selected')
+    this.scService.currentStudent = this.players[0];
   }
 
   selectPlayer() {

@@ -7,7 +7,7 @@ import { throwError } from 'rxjs';
 
 @Injectable()
 export class SubjectCreatorService {
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,) {
     // this.getPlayers();
     // this.launch();
     this.getPlayers();
@@ -18,8 +18,8 @@ export class SubjectCreatorService {
   public currentSubjects;
   players: Player[] = [];
   deletedSubjects = [];
-  createSubjectsUrl = 'https://localhost:5001/api/subject/BatchSave';
-  deleteSubjectsUrl = 'https://localhost:5001/api/subject/BatchDelete';
+  createSubjectsUrl = 'https://localhost:44367/api/subject/BatchSave';
+  deleteSubjectsUrl = 'https://localhost:44367/api/subject/BatchDelete';
 
 
   // fetchCharacters() {
@@ -48,7 +48,7 @@ export class SubjectCreatorService {
   };
 
   async getPlayers() {
-    const testUrl = 'https://localhost:5001/api/player';
+    const testUrl = 'https://localhost:44367/api/player';
     console.log(testUrl)
     this.http.get(testUrl)
       .subscribe((res: Player[]) => {

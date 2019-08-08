@@ -6,7 +6,7 @@
     class="student-selected-header">
   <h1
     >{{scService.getCurrentStudent().name}}</h1>
-    <button (click)="scService.onSaveSubjects()">Save</button>
+    <button class="btn-primary" (click)="scService.onSaveSubjects()">Save</button>
   </div>
 </div>
 
@@ -35,11 +35,18 @@
       [ngClass]="{'warning': gradeCtrl.invalid}">
   </div>
 
-  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Add a new subject</button>
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid || !scService.currentStudent">Add a new subject</button>
 
 </form>
-
-<app-subject-list
+<h2
+  *ngIf="!scService.currentStudent"
+  class="select-student-message">
+  Please select a student!
+</h2>
+<div
   *ngIf="scService.currentStudent"
-  class="subject-list"
-  [subjects]='scService.getCurrentSubjects()'></app-subject-list>
+  class="subject-list">
+  <app-subject-list
+    
+    [subjects]='scService.getCurrentSubjects().reverse()'></app-subject-list>
+</div>

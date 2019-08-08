@@ -1,7 +1,8 @@
 <mat-button-toggle
   class="button-content"
   value={{player.id}}
-  id={{player.id}}>
+  id={{player.id}}
+  [ngClass]="{'selected': scService.currentStudent ? player.id === scService.currentStudent.id : false}">
   <h4>{{player.name}}</h4>
 </mat-button-toggle>
 

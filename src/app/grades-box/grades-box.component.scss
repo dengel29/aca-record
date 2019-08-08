@@ -1,9 +1,4 @@
 .form-group {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   max-width: 60%;
-//   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1;
@@ -33,15 +28,24 @@ input {
 }
 
 .subject-list {
-  max-height: 7em;
+  height: 8em;
+  max-height: 10em;
   width: auto;
   overflow-y: scroll;
-  border: 2px solid hotpink;
+  border: 2px solid rgba(255, 105, 180, 0.473);
 }
 
-
+button:disabled {
+  background-color: rgba(131, 163, 143, 0.753);
+  color: rgba(124, 11, 11, 0.568);
+}
 .btn-primary {
-  background-color: rgba(1, 119, 119, 0.459);
+  background-color: rgba(11, 175, 74, 0.623);
+  color: rgba(0, 0, 0, 0.486);
+  font-weight:bold;
+  border-radius: 2.5px;
+  box-shadow: 0px;
+  border: none;
 }
 
 .student-selected-header {
